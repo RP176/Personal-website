@@ -64,7 +64,7 @@ document.addEventListener('visibilitychange',
         }
         else {
             document.title = "Portfolio | Roadashi Panta";
-            $("#favicon").attr("href", "assets/images/favhand.png");
+            $("#favicon").attr("href", "assets/images/favicon.png");
         }
     });
 
