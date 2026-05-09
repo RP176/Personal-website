@@ -290,7 +290,8 @@ srtop.reveal('.skills .skills-intro', { delay: 200 });
 srtop.reveal('.skills .skill-card', { interval: 200, distance: '40px' });
 
 /* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
+srtop.reveal('.education .education-intro', { delay: 200 });
+srtop.reveal('.education .edu-card', { interval: 200, distance: '40px' });
 
 /* SCROLL PROJECTS */
 srtop.reveal('.work .proj-intro', { delay: 200 });
