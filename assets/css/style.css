@@ -1,110 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
-/* ===== Theme tokens ===== */
+/* ===== Theme tokens =====
+   Refined palette: warm charcoal (dark) + warm ivory (light)
+   Accent system: terracotta (#C26A4D) primary + deep teal (#1F5C5E) secondary
+*/
 :root {
   /* Page */
-  --bg-page: #160433;
-  --header-bg: rgba(22, 4, 51, 0.85);
-  --header-border: rgba(255, 255, 255, 0.06);
-  --logo-color: #ffffff;
-  --nav-link: #d8d3ec;
+  --bg-page: #0c0d11;
+  --header-bg: rgba(12, 13, 17, 0.82);
+  --header-border: rgba(255, 255, 255, 0.05);
+  --logo-color: #f4f1ea;
+  --nav-link: #c4c0b6;
 
   /* Text */
-  --text-strong: #ffffff;
-  --text-body: #d8d3ec;
-  --text-muted: #b8b3d4;
+  --text-strong: #f4f1ea;
+  --text-body: #c4c0b6;
+  --text-muted: #8a877e;
 
   /* Surfaces (glass cards, pills) */
-  --surface-bg: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  --surface-border: rgba(255,255,255,0.08);
-  --surface-hover-bg: rgba(255,255,255,0.08);
-  --pill-bg: rgba(255,255,255,0.04);
+  --surface-bg: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.012));
+  --surface-border: rgba(255,255,255,0.07);
+  --surface-hover-bg: rgba(255,255,255,0.06);
+  --pill-bg: rgba(255,255,255,0.035);
   --pill-bg-strong: rgba(255,255,255,0.06);
-  --pill-border: rgba(255,255,255,0.10);
-  --grid-dot: rgba(255,255,255,0.04);
+  --pill-border: rgba(255,255,255,0.09);
+  --grid-dot: rgba(255,255,255,0.035);
   --hr-dashed: rgba(255,255,255,0.08);
-  --shadow-card: 0 1.4rem 3rem rgba(0,0,0,0.35);
-  --shadow-card-hover: 0 2.4rem 4.4rem rgba(0,0,0,0.5);
+  --shadow-card: 0 1.2rem 2.6rem rgba(0,0,0,0.45);
+  --shadow-card-hover: 0 2rem 4rem rgba(0,0,0,0.6);
 
-  /* Section gradients */
+  /* Section gradients - cohesive charcoal base, accent tints */
   --hero-bg:
-    radial-gradient(ellipse at 20% 30%, rgba(168, 85, 247, 0.18), transparent 55%),
-    radial-gradient(ellipse at 80% 70%, rgba(34, 211, 238, 0.10), transparent 55%),
-    linear-gradient(to bottom, #1a0738 0%, #2a0a5c 100%);
+    radial-gradient(ellipse at 25% 30%, rgba(194,106,77,0.12), transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(34,211,238,0.07), transparent 55%),
+    linear-gradient(to bottom, #11131a 0%, #0c0d11 100%);
   --about-bg:
-    radial-gradient(ellipse at 80% 0%, rgba(168, 85, 247, 0.14), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(34, 211, 238, 0.08), transparent 55%),
-    linear-gradient(to bottom, #2a0a5c 0%, #2a0a5c 100%);
+    radial-gradient(ellipse at 80% 0%, rgba(194,106,77,0.08), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(34,211,238,0.05), transparent 55%),
+    linear-gradient(to bottom, #0c0d11 0%, #0e1015 100%);
   --skills-bg:
-    radial-gradient(ellipse at 0% 0%, rgba(34,211,238,0.10), transparent 50%),
-    radial-gradient(ellipse at 100% 100%, rgba(251,191,36,0.10), transparent 50%),
-    linear-gradient(to bottom, #2a0a5c 0%, #410d8a 50%, #2a0a5c 100%);
+    radial-gradient(ellipse at 0% 0%, rgba(34,211,238,0.07), transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(194,106,77,0.09), transparent 50%),
+    linear-gradient(to bottom, #0e1015 0%, #0c0d11 50%, #0e1015 100%);
   --education-bg:
-    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.08), transparent 50%),
-    radial-gradient(ellipse at 0% 100%, rgba(220,20,60,0.06), transparent 50%),
-    linear-gradient(to bottom, #160433 0%, #2a0a5c 50%, #1a0738 100%);
+    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.10), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(220,80,80,0.04), transparent 50%),
+    linear-gradient(to bottom, #0c0d11 0%, #0e1015 50%, #0c0d11 100%);
   --work-bg:
-    radial-gradient(ellipse at 80% 0%, rgba(34,211,238,0.06), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.06), transparent 55%),
-    linear-gradient(to bottom, #050b22 0%, #0a1438 50%, #060a1f 100%);
+    radial-gradient(ellipse at 80% 0%, rgba(34,211,238,0.07), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.04), transparent 55%),
+    linear-gradient(to bottom, #0c0d11 0%, #0e1015 50%, #0c0d11 100%);
   --experience-bg:
-    radial-gradient(ellipse at 20% 0%, rgba(251,191,36,0.08), transparent 50%),
-    radial-gradient(ellipse at 80% 100%, rgba(0,168,232,0.08), transparent 50%),
-    linear-gradient(to bottom, #1a0738 0%, #2a0a5c 50%, #160433 100%);
+    radial-gradient(ellipse at 20% 0%, rgba(194,106,77,0.10), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(34,211,238,0.06), transparent 50%),
+    linear-gradient(to bottom, #0e1015 0%, #0c0d11 50%, #0e1015 100%);
 
-  /* Footer (kept dark in both themes for contrast) */
-  --footer-bg: rgb(0, 1, 43);
+  --footer-bg: #07080b;
 }
 
 [data-theme="light"] {
-  --bg-page: #f7f4fc;
-  --header-bg: rgba(255, 255, 255, 0.85);
-  --header-border: rgba(26, 7, 56, 0.08);
-  --logo-color: #1a0738;
-  --nav-link: #3a2c5c;
+  /* Page */
+  --bg-page: #faf7f1;
+  --header-bg: rgba(250, 247, 241, 0.88);
+  --header-border: rgba(20, 18, 15, 0.08);
+  --logo-color: #1a1a1f;
+  --nav-link: #4a4842;
 
-  --text-strong: #1a0738;
-  --text-body: #3a2c5c;
-  --text-muted: #6e6688;
+  /* Text */
+  --text-strong: #1a1a1f;
+  --text-body: #4a4842;
+  --text-muted: #7a7770;
 
-  --surface-bg: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.75));
-  --surface-border: rgba(26,7,56,0.10);
-  --surface-hover-bg: rgba(26,7,56,0.04);
-  --pill-bg: rgba(26,7,56,0.04);
-  --pill-bg-strong: rgba(26,7,56,0.06);
-  --pill-border: rgba(26,7,56,0.10);
-  --grid-dot: rgba(26,7,56,0.06);
-  --hr-dashed: rgba(26,7,56,0.10);
-  --shadow-card: 0 1rem 2.4rem rgba(26,7,56,0.10);
-  --shadow-card-hover: 0 1.6rem 3.4rem rgba(26,7,56,0.18);
+  /* Surfaces */
+  --surface-bg: linear-gradient(160deg, rgba(255,255,255,0.85), rgba(255,255,255,0.55));
+  --surface-border: rgba(20,18,15,0.09);
+  --surface-hover-bg: rgba(20,18,15,0.035);
+  --pill-bg: rgba(20,18,15,0.035);
+  --pill-bg-strong: rgba(20,18,15,0.055);
+  --pill-border: rgba(20,18,15,0.10);
+  --grid-dot: rgba(20,18,15,0.05);
+  --hr-dashed: rgba(20,18,15,0.10);
+  --shadow-card: 0 0.9rem 2rem rgba(20,18,15,0.07);
+  --shadow-card-hover: 0 1.4rem 3rem rgba(20,18,15,0.12);
 
   --hero-bg:
-    radial-gradient(ellipse at 20% 30%, rgba(168, 85, 247, 0.10), transparent 55%),
-    radial-gradient(ellipse at 80% 70%, rgba(34, 211, 238, 0.10), transparent 55%),
-    linear-gradient(to bottom, #faf6ff 0%, #efe6f9 100%);
+    radial-gradient(ellipse at 25% 30%, rgba(194,106,77,0.14), transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(34,211,238,0.07), transparent 55%),
+    linear-gradient(to bottom, #faf7f1 0%, #f3eee5 100%);
   --about-bg:
-    radial-gradient(ellipse at 80% 0%, rgba(168, 85, 247, 0.08), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(34, 211, 238, 0.06), transparent 55%),
-    linear-gradient(to bottom, #f5eefb 0%, #efe6f9 100%);
+    radial-gradient(ellipse at 80% 0%, rgba(194,106,77,0.09), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(34,211,238,0.06), transparent 55%),
+    linear-gradient(to bottom, #f5f0e7 0%, #faf7f1 100%);
   --skills-bg:
     radial-gradient(ellipse at 0% 0%, rgba(34,211,238,0.08), transparent 50%),
-    radial-gradient(ellipse at 100% 100%, rgba(251,191,36,0.10), transparent 50%),
-    linear-gradient(to bottom, #f4ecfc 0%, #ebdef9 50%, #f4ecfc 100%);
+    radial-gradient(ellipse at 100% 100%, rgba(194,106,77,0.10), transparent 50%),
+    linear-gradient(to bottom, #faf7f1 0%, #f3eee5 50%, #faf7f1 100%);
   --education-bg:
-    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.14), transparent 50%),
-    radial-gradient(ellipse at 0% 100%, rgba(220,20,60,0.05), transparent 50%),
-    linear-gradient(to bottom, #faf6ff 0%, #f0e7fb 50%, #f6efff 100%);
+    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.20), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(220,80,80,0.05), transparent 50%),
+    linear-gradient(to bottom, #f5f0e7 0%, #faf7f1 50%, #f5f0e7 100%);
   --work-bg:
     radial-gradient(ellipse at 80% 0%, rgba(34,211,238,0.08), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.06), transparent 55%),
-    linear-gradient(to bottom, #f3f7fc 0%, #e8eef8 50%, #f3f7fc 100%);
+    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.05), transparent 55%),
+    linear-gradient(to bottom, #faf7f1 0%, #f3eee5 50%, #faf7f1 100%);
   --experience-bg:
-    radial-gradient(ellipse at 20% 0%, rgba(251,191,36,0.10), transparent 50%),
-    radial-gradient(ellipse at 80% 100%, rgba(0,168,232,0.08), transparent 50%),
-    linear-gradient(to bottom, #faf5ff 0%, #efe6f9 50%, #f6efff 100%);
+    radial-gradient(ellipse at 20% 0%, rgba(194,106,77,0.12), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(34,211,238,0.06), transparent 50%),
+    linear-gradient(to bottom, #f5f0e7 0%, #faf7f1 50%, #f5f0e7 100%);
 
-  --footer-bg: #1a0738;
+  --footer-bg: #1a1a1f;
 }
 
 * {
@@ -194,7 +199,7 @@ section {
   text-align: center;
 }
 .heading span {
-  color: #FBBF24;
+  color: #C26A4D;
 }
 header .logo {
   font-size: 1.9rem;
@@ -206,7 +211,7 @@ header .logo i {
   font-size: 2.2rem;
 }
 header .logo:hover {
-  color: #FBBF24;
+  color: #C26A4D;
 }
 header .navbar ul {
   list-style: none;
@@ -227,8 +232,8 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #FBBF24;
-  border-bottom: 0.2rem solid #FBBF24;
+  color: #C26A4D;
+  border-bottom: 0.2rem solid #C26A4D;
   padding: 0.5rem 0;
 }
 
@@ -251,8 +256,8 @@ header .navbar ul li a:hover {
 }
 .theme-toggle:hover {
   background: var(--surface-hover-bg);
-  color: #FBBF24;
-  border-color: #FBBF24;
+  color: #C26A4D;
+  border-color: #C26A4D;
   transform: rotate(15deg);
 }
 .theme-toggle .theme-icon-sun { display: none; }
@@ -377,7 +382,7 @@ header .navbar ul li a:hover {
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #FBBF24;
+  color: #C26A4D;
 }
 .home .content p {
   font-size: 2.5rem;
@@ -541,7 +546,7 @@ header .navbar ul li a:hover {
 }
 .about .row .content .tag {
   font-size: 1.4rem;
-  color: #FBBF24;
+  color: #C26A4D;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -640,7 +645,7 @@ header .navbar ul li a:hover {
   position: relative;
   z-index: 1;
 }
-.skills .heading i { color: #FBBF24; margin-right: 0.8rem; }
+.skills .heading i { color: #C26A4D; margin-right: 0.8rem; }
 .skills .heading span { color: rgb(255, 230, 0); }
 
 .skills-intro {
@@ -1429,7 +1434,7 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 .experience .heading i {
-  color: #fbbf24;
+  color: #C26A4D;
   margin-right: 0.8rem;
 }
 .experience .heading span {
@@ -1465,8 +1470,8 @@ header .navbar ul li a:hover {
   width: 2px;
   background: linear-gradient(to bottom,
     transparent 0%,
-    rgba(251,191,36,0.6) 8%,
-    rgba(251,191,36,0.6) 92%,
+    rgba(194,106,77,0.6) 8%,
+    rgba(194,106,77,0.6) 92%,
     transparent 100%);
   transform: translateX(-50%);
 }
@@ -1494,11 +1499,11 @@ header .navbar ul li a:hover {
   width: 5.4rem;
   height: 5.4rem;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), var(--accent, #fbbf24) 60%);
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), var(--accent, #C26A4D) 60%);
   border: 3px solid var(--bg-page);
   box-shadow:
-    0 0 0 2px var(--accent, #fbbf24),
-    0 0 24px var(--accent, #fbbf24),
+    0 0 0 2px var(--accent, #C26A4D),
+    0 0 24px var(--accent, #C26A4D),
     0 0 48px rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
@@ -1535,7 +1540,7 @@ header .navbar ul li a:hover {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent, #fbbf24), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent, #C26A4D), transparent);
 }
 .exp-body::after {
   content: '';
@@ -1585,7 +1590,7 @@ header .navbar ul li a:hover {
 }
 .exp-role {
   font-size: 1.4rem;
-  color: var(--accent, #fbbf24);
+  color: var(--accent, #C26A4D);
   font-weight: 600;
   margin: 0.5rem 0 1.1rem;
   text-transform: none;
@@ -1686,14 +1691,14 @@ header .navbar ul li a:hover {
   gap: 0.8rem;
   padding: 1.4rem 2.8rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #C26A4D, #8C4030);
   color: #1a0738;
   font-weight: 700;
   font-size: 1.5rem;
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   letter-spacing: 0.5px;
-  box-shadow: 0 1rem 2rem rgba(251,191,36,0.25);
+  box-shadow: 0 1rem 2rem rgba(194,106,77,0.25);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 .exp-cta-btn i {
@@ -1702,7 +1707,7 @@ header .navbar ul li a:hover {
 }
 .exp-cta-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1.6rem 2.8rem rgba(251,191,36,0.4);
+  box-shadow: 0 1.6rem 2.8rem rgba(194,106,77,0.4);
 }
 .exp-cta-btn:hover i {
   transform: translateX(5px);
