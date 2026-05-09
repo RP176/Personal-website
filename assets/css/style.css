@@ -1122,8 +1122,11 @@ has context menu
 .exp-card {
   position: relative;
   width: 50%;
-  padding: 0 4.5rem 5rem;
+  padding: 0 4.5rem 2rem;
   box-sizing: border-box;
+}
+.exp-card + .exp-card {
+  margin-top: -10rem;
 }
 .exp-card[data-side="right"] {
   margin-left: 50%;
@@ -1367,6 +1370,7 @@ has context menu
     padding: 0 0 4rem 5.5rem;
     text-align: left;
   }
+  .exp-card + .exp-card { margin-top: 0; }
   .exp-card[data-side="right"] .exp-marker,
   .exp-card[data-side="left"] .exp-marker {
     left: -0.4rem;
