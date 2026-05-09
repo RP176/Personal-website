@@ -23,7 +23,7 @@
 
 <!-- navbar starts -->
 <header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Rodashi</a>
+        <a href="/" class="logo">Rodashi</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -315,116 +315,181 @@
 <!-- work project section starts -->
 <section class="work" id="work">
 
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects</span></h2>
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects</h2>
+  <p class="proj-intro">Where data, design, and curiosity collide &mdash; selected projects across machine learning, analytics, and engineering.</p>
 
-  <div class="box-container">
+  <div class="proj-grid">
 
-    <div class="box tilt">
-      <img draggable="false" src=".\assets\images\r projects\sistac.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Social Innovation Business Development</h3>
-        </div>
-        <div class="desc">
-          <p>In the Social Innovation Business Development project, I collaborate with the Bayer Foundation and Dockokids, a nonprofit focused on accessible healthcare for children. After analyzing Dockokids’ business model, we identified operational challenges and concluded that a dashboard for day-to-day operations is necessary. We are currently building this dashboard to integrate datasets, aiming for a 30% improvement in data analysis efficiency and a 20% boost in productivity. Additionally, we plan to conduct exploratory data analysis (EDA) to predict patient traffic and, if time allows, develop a chatbot for initial screening.</p>
-          <div class="btns">
-            <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-          </div>
-        </div>
+    <article class="proj-card" style="--accent:#22D3EE;">
+      <div class="proj-cover">
+        <img draggable="false" src="./assets/images/r projects/sistac.png" alt="Social Innovation Business Development" />
+        <span class="proj-cat"><i class="fas fa-heartbeat"></i> Social Impact</span>
       </div>
-    </div>
-    <div class="box tilt">
-      <img draggable="false" src=".\assets\images\r projects\soccer.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Implementation of Reweighted Models for Robust-Deep-Learning</h3>
+      <div class="proj-body">
+        <h3 class="proj-title">Social Innovation Business Development</h3>
+        <p class="proj-org">Bayer Foundation &middot; Dockokids</p>
+        <p class="proj-desc">Building an operations dashboard for a children's healthcare nonprofit, integrating datasets and running EDA to forecast patient traffic.</p>
+        <div class="proj-full" hidden>
+          <p>In the Social Innovation Business Development project, I collaborate with the Bayer Foundation and Dockokids, a nonprofit focused on accessible healthcare for children. After analyzing Dockokids' business model, we identified operational challenges and concluded that a dashboard for day-to-day operations is necessary.</p>
+          <p>We are currently building this dashboard to integrate datasets, aiming for a 30% improvement in data analysis efficiency and a 20% boost in productivity. Additionally, we plan to conduct exploratory data analysis (EDA) to predict patient traffic and, if time allows, develop a chatbot for initial screening.</p>
         </div>
-        <div class="desc">
-          <p>In the Implementation of Reweighted Models for Robust Deep Learning project, I achieved 96% accuracy on highly imbalanced datasets (200:1) with 25% noise by enhancing CNN training through a class and sample reweighting mechanism. Additionally, I improved the accuracy of VAR foul detection by 30% in datasets with 50% noise while effectively reducing computational overhead during processing. This approach not only strengthened model robustness but also streamlined performance, demonstrating the effectiveness of reweighted models in handling challenging datasets.</p>
-          <div class="btns">
-            <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-          </div>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-num">30%</span><span class="proj-stat-label">data analysis efficiency</span></div>
+          <div class="proj-stat"><span class="proj-stat-num">20%</span><span class="proj-stat-label">productivity boost</span></div>
+        </div>
+        <div class="proj-tags">
+          <span>Dashboards</span><span>EDA</span><span>Healthcare</span>
+        </div>
+        <button type="button" class="proj-readmore">Read full project <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>
+
+    <article class="proj-card" style="--accent:#A855F7;">
+      <div class="proj-cover">
+        <img draggable="false" src="./assets/images/r projects/soccer.png" alt="Reweighted Models for Robust Deep Learning" />
+        <span class="proj-cat"><i class="fas fa-brain"></i> Machine Learning</span>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Reweighted Models for Robust Deep Learning</h3>
+        <p class="proj-org">Purdue University &middot; Spring 2024</p>
+        <p class="proj-desc">Enhanced CNN training with class and sample reweighting on imbalanced (200:1), noisy datasets &mdash; including VAR foul detection in soccer footage.</p>
+        <div class="proj-full" hidden>
+          <p>In the Implementation of Reweighted Models for Robust Deep Learning project, I achieved 96% accuracy on highly imbalanced datasets (200:1) with 25% noise by enhancing CNN training through a class and sample reweighting mechanism.</p>
+          <p>I improved the accuracy of VAR foul detection by 30% in datasets with 50% noise while effectively reducing computational overhead during processing. This approach not only strengthened model robustness but also streamlined performance, demonstrating the effectiveness of reweighted models in handling challenging datasets.</p>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-num">96%</span><span class="proj-stat-label">accuracy at 25% noise</span></div>
+          <div class="proj-stat"><span class="proj-stat-num">+30%</span><span class="proj-stat-label">VAR foul detection</span></div>
+        </div>
+        <div class="proj-tags">
+          <span>CNN</span><span>PyTorch</span><span>Class Reweighting</span>
+        </div>
+        <button type="button" class="proj-readmore">Read full project <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>
+
+    <article class="proj-card" style="--accent:#10B981;">
+      <div class="proj-cover">
+        <img draggable="false" src="./assets/images/r projects/stock.png" alt="Stock Exchange Market Analysis" />
+        <span class="proj-cat"><i class="fas fa-chart-line"></i> Data Analytics</span>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Stock Exchange Market Analysis</h3>
+        <p class="proj-org">Sector Correlation &middot; Forecasting</p>
+        <p class="proj-desc">Analyzed 20 companies across 4 sectors to quantify inter-sector relationships and forecast prices using historical trading data and the Crystal-Ball predictor.</p>
+        <div class="proj-full" hidden>
+          <p>In the Stock Exchange Market Analysis project, I conducted data analysis on 20 companies across four sectors to quantify inter-sector relationships, delivering actionable insights for market strategies.</p>
+          <p>Utilizing historical trading data and the Crystal-Ball predictor, I forecasted stock prices with an impressive 80% accuracy. This project honed my expertise in predictive modeling and analysis, enabling me to identify trends and correlations within the market. The insights gained not only informed strategic decision-making but also enhanced understanding of market dynamics across different sectors.</p>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-num">80%</span><span class="proj-stat-label">forecast accuracy</span></div>
+          <div class="proj-stat"><span class="proj-stat-num">20</span><span class="proj-stat-label">companies analyzed</span></div>
+        </div>
+        <div class="proj-tags">
+          <span>Predictive Modeling</span><span>Crystal Ball</span><span>Excel</span>
+        </div>
+        <button type="button" class="proj-readmore">Read full project <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>
+
+    <article class="proj-card" style="--accent:#F472B6;">
+      <div class="proj-cover">
+        <img draggable="false" src="./assets/images/r projects/music genre.png" alt="Music Genre Detection" />
+        <span class="proj-cat"><i class="fas fa-music"></i> Audio ML</span>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Music Genre Detection</h3>
+        <p class="proj-org">Signal Processing &middot; Classification</p>
+        <p class="proj-desc">Classified raw audio into 10 genres using MFCCs and Chroma energy features, blending PCA, ANN and KNN for robust prediction.</p>
+        <div class="proj-full" hidden>
+          <p>In the Music Genre Detection project, I classified raw audio samples into 10 genres using audio features such as MFCCs and Chroma energy, showcasing advanced signal processing techniques.</p>
+          <p>I developed a machine learning model that employed PCA, ANN, and KNN, demonstrating my proficiency in applying AI models to real-world datasets. This approach enabled me to achieve over 90% accuracy in genre classification, highlighting the effectiveness of combining various techniques in music analysis. The project significantly enhanced my skills in audio processing and machine learning for genre identification.</p>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-num">90%+</span><span class="proj-stat-label">classification accuracy</span></div>
+          <div class="proj-stat"><span class="proj-stat-num">10</span><span class="proj-stat-label">genres detected</span></div>
+        </div>
+        <div class="proj-tags">
+          <span>PCA</span><span>ANN</span><span>KNN</span><span>MFCC</span>
+        </div>
+        <button type="button" class="proj-readmore">Read full project <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>
+
+    <article class="proj-card" style="--accent:#FBBF24;">
+      <div class="proj-cover">
+        <img draggable="false" src="./assets/images/r projects/rowwboatics.png" alt="Rowboatics Competition" />
+        <span class="proj-cat"><i class="fas fa-trophy"></i> Mechanical Design</span>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">&ldquo;Rowboatics&rdquo; International Competition</h3>
+        <p class="proj-org">TechFest &middot; IIT Bombay</p>
+        <p class="proj-desc">Designed and built an RC boat prototype in SolidWorks, optimizing functionality through iterative design while managing timeline and budget end-to-end.</p>
+        <div class="proj-full" hidden>
+          <p>In the International &ldquo;Rowboatics&rdquo; Competition at TechFest, IIT Bombay, I designed and developed an RC boat prototype using SolidWorks, ultimately securing 1st place by optimizing functionality through innovative designs.</p>
+          <p>I managed the project's timeline and budget, ensuring on-time delivery and successful testing, which showcased my project management skills in a competitive environment. This experience not only honed my technical abilities in design and prototyping but also strengthened my capability to coordinate resources effectively, balancing creativity with practical constraints to achieve outstanding results.</p>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-num">1st</span><span class="proj-stat-label">place finish</span></div>
+          <div class="proj-stat"><span class="proj-stat-num">SolidWorks</span><span class="proj-stat-label">CAD &amp; prototyping</span></div>
+        </div>
+        <div class="proj-tags">
+          <span>SolidWorks</span><span>RC Boat</span><span>Prototyping</span>
+        </div>
+        <button type="button" class="proj-readmore">Read full project <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>
+
+    <article class="proj-card" style="--accent:#F97316;">
+      <div class="proj-cover">
+        <img draggable="false" src="./assets/images/r projects/hackathon.png" alt="Access for All Hackathon" />
+        <span class="proj-cat"><i class="fas fa-hand-holding-heart"></i> Hackathon</span>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Access for All Hackathon</h3>
+        <p class="proj-org">Thapathali Institute of Engineering</p>
+        <p class="proj-desc">Designed and prototyped an extendable prosthetic arm in SolidWorks, building a cost-effective, inclusive solution for differently-abled users.</p>
+        <div class="proj-full" hidden>
+          <p>At the Access for All: Hackathon held at Thapathali Institute of Engineering, I collaborated to design and prototype an extendable prosthetic arm using SolidWorks, enhancing functionality for differently-abled users by 40%.</p>
+          <p>Our team secured 3rd place out of over 50 teams by creating a cost-effective and functional solution, showcasing our prototyping and mechanical design capabilities. This experience not only deepened my understanding of inclusive design but also reinforced my ability to work effectively in a team, focusing on innovative problem-solving for real-world challenges.</p>
+        </div>
+        <div class="proj-stats">
+          <div class="proj-stat"><span class="proj-stat-num">3rd / 50</span><span class="proj-stat-label">teams placed</span></div>
+          <div class="proj-stat"><span class="proj-stat-num">+40%</span><span class="proj-stat-label">functionality boost</span></div>
+        </div>
+        <div class="proj-tags">
+          <span>SolidWorks</span><span>Prosthetic</span><span>Inclusive Design</span>
+        </div>
+        <button type="button" class="proj-readmore">Read full project <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Project detail modal -->
+  <div class="proj-modal" id="projModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projModalTitle">
+    <div class="proj-modal-backdrop" data-modal-close></div>
+    <div class="proj-modal-content">
+      <button type="button" class="proj-modal-close" data-modal-close aria-label="Close project details"><i class="fas fa-times"></i></button>
+      <div class="proj-modal-cover">
+        <img alt="" />
+        <span class="proj-cat"></span>
+      </div>
+      <div class="proj-modal-body">
+        <h3 class="proj-title" id="projModalTitle"></h3>
+        <p class="proj-org"></p>
+        <div class="proj-modal-desc"></div>
+        <div class="proj-modal-section">
+          <h4 class="proj-modal-h">Impact</h4>
+          <div class="proj-stats"></div>
+        </div>
+        <div class="proj-modal-section">
+          <h4 class="proj-modal-h">Tools &amp; Techniques</h4>
+          <div class="proj-tags"></div>
         </div>
       </div>
     </div>
   </div>
-</div>
-    <div class="box-container">
-
-      <div class="box tilt">
-        <img draggable="false" src=".\assets\images\r projects\stock.png" alt="" />
-        <div class="content">
-          <div class="tag">
-          <h3>Stock Exchange Market Analysis</h3>
-          </div>
-          <div class="desc">
-            <p>In the Stock Exchange Market Analysis project, I conducted data analysis on 20 companies across four sectors to quantify inter-sector relationships, delivering actionable insights for market strategies. Utilizing historical trading data and the Crystal-Ball predictor, I forecasted stock prices with an impressive 80% accuracy. This project honed my expertise in predictive modeling and analysis, enabling me to identify trends and correlations within the market. The insights gained not only informed strategic decision-making but also enhanced understanding of market dynamics across different sectors.</p>
-            <div class="btns">
-              <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-              <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="box tilt">
-        <img draggable="false" src=".\assets\images\r projects\music genre.png" alt="" />
-        <div class="content">
-          <div class="tag">
-          <h3>Music Genre Detection</h3>
-          </div>
-          <div class="desc">
-            <p>In the Music Genre Detection project, I classified raw audio samples into 10 genres using audio features such as MFCCs and Chroma energy, showcasing advanced signal processing techniques. I developed a machine learning model that employed PCA, ANN, and KNN, demonstrating my proficiency in applying AI models to real-world datasets. This approach enabled me to achieve over 90% accuracy in genre classification, highlighting the effectiveness of combining various techniques in music analysis. The project significantly enhanced my skills in audio processing and machine learning for genre identification.</p>
-            <div class="btns">
-              <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-              <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="box-container">
-
-    <div class="box tilt">
-      <img draggable="false" src=".\assets\images\r projects\rowwboatics.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>International “Rowboatics” Competition</h3>
-        </div>
-        <div class="desc">
-          <p>In the International “Rowboatics” Competition at TechFest, IIT Bombay, I designed and developed an RC boat prototype using SolidWorks, ultimately securing 1st place by optimizing functionality through innovative designs. I managed the project’s timeline and budget, ensuring on-time delivery and successful testing, which showcased my project management skills in a competitive environment. This experience not only honed my technical abilities in design and prototyping but also strengthened my capability to coordinate resources effectively, balancing creativity with practical constraints to achieve outstanding results.</p>
-          <div class="btns">
-            <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="box tilt">
-      <img draggable="false" src=".\assets\images\r projects\hackathon.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Access for All: Hackathon</h3>
-        </div>
-        <div class="desc">
-          <p>At the Access for All: Hackathon held at Thapathali Institute of Engineering, I collaborated to design and prototype an extendable prosthetic arm using SolidWorks, enhancing functionality for differently-abled users by 40%. Our team secured 3rd place out of over 50 teams by creating a cost-effective and functional solution, showcasing our prototyping and mechanical design capabilities. This experience not only deepened my understanding of inclusive design but also reinforced my ability to work effectively in a team, focusing on innovative problem-solving for real-world challenges.</p>
-          <div class="btns">
-            <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--<div class="viewall">
-  <a href="/projects" class="btn"><span>View All</span>
-    <i class="fas fa-arrow-right"></i>
-</a>
-</div>-->
 
 </section>
 <!-- work project section ends -->
@@ -432,192 +497,196 @@
 <!-- experience section starts -->
 <section class="experience" id="experience">
 
+<h2 class="heading"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+<p class="experience-intro">A journey through energy, automation, and impact &mdash; building products, processes, and people.</p>
 
-<h2 class="heading"><i class="fas fa-briefcase"></i>Profesional Experience </h2>
+<div class="exp-timeline">
 
-<div class="box-container">
-
-  <div class="box tilt">
-    <img draggable="false" src=".\assets\images\experience\2.png" alt="" />
-    <div class="content">
-      <div class="tag">
-      <h3>Role Description</h3>
-      </div>
-      <div class="desc">
-        <p>In this role, I led a 15-member cross-functional team to improve the aircraft spare parts supply chain. We began by applying advanced exploratory data analysis and predictive modeling, which resulted in a 20% increase in sales forecast accuracy. To further enhance performance, I utilized machine learning algorithms with a test-train approach, boosting model accuracy and reliability by 15%. By collaborating closely with technical and supply chain teams through Kanban and Jira, we improved communication flow and successfully increased project delivery efficiency by 10%, ensuring smoother operations across the board.</p>
-        <div class="btns">
-          <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-          <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
+  <article class="exp-card" data-side="right" style="--accent:#C8102E;">
+    <div class="exp-marker"><i class="fas fa-helicopter"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">Now</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Bell Flight &middot; The Data Mine</h3>
+        <p class="exp-role">Technical Program Manager &middot; Purdue University</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Jan 2026 &ndash; Present</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> West Lafayette, IN</span>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="box tilt">
-    <img draggable="false" src=".\assets\images\experience\3.png" alt="" />
-    <div class="content">
-      <div class="tag">
-      <h3>Role Description</h3>
+      <ul class="exp-achievements">
+        <li>Leading development of kit-installation IE standards by analyzing historical run times, aircraft models, SKUs &mdash; defining benchmark labor hours</li>
+        <li>Building a forecasting matrix that estimates planned hours within defined variance for scheduling, budgeting, and pricing &mdash; <span class="exp-metric">10%</span> accuracy lift</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Industrial Engineering</span><span>Forecasting</span><span>Aerospace</span>
       </div>
-      <div class="desc">
-        <p>I managed a team using Agile methodologies to develop an LLM chatbot designed to automate nuclear energy proposals, which increased productivity by 20%. By leveraging data analytics and machine learning, we optimized the chatbot algorithms and streamlined data processing, improving performance by 15%. Additionally, I employed risk management strategies, including risk registers and mitigation tactics, to ensure timely delivery of project milestones, ultimately enhancing project efficiency by 20%. This cohesive approach allowed us to meet targets while driving innovation and improving operational performance.</p>
-        <div class="btns">
-          <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-          <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
+    </div>
+  </article>
+
+  <article class="exp-card" data-side="left" style="--accent:#E31937;">
+    <div class="exp-marker"><i class="fas fa-bolt"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2025</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Tesla Energy</h3>
+        <p class="exp-role">Program Manager Intern &middot; Residential Energy</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> May &ndash; Dec 2025</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> Fremont, CA</span>
         </div>
       </div>
+      <ul class="exp-achievements">
+        <li>Designed and automated standardized ops workflows across 4 teams &mdash; <span class="exp-metric">15%</span> SLA efficiency gain, saving <span class="exp-metric">200+ hrs/quarter</span></li>
+        <li>Partnered with software engineering to test internal products and ship <span class="exp-metric">3</span> new features &mdash; <span class="exp-metric">18%</span> productivity boost</li>
+        <li>Streamlined diagnosis pathways for correction codes &mdash; <span class="exp-metric">15%</span> reduction in field-service diagnosis time</li>
+        <li>Redesigned Service Ops Support escalation workflows &mdash; <span class="exp-metric">45%</span> faster resolution</li>
+        <li>Collaborated with field service & ops to fold feedback into process design, improving usability and adoption</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Process Automation</span><span>Cross-Functional</span><span>Service Ops</span>
+      </div>
     </div>
-  </div>
+  </article>
+
+  <article class="exp-card" data-side="right" style="--accent:#00A8E8;">
+    <div class="exp-marker"><i class="fas fa-battery-three-quarters"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2024 &mdash; 2025</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Eos Energy Enterprise</h3>
+        <p class="exp-role">Supply Chain Analyst Intern &middot; Global Supply Chain</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Dec 2024 &ndash; Apr 2025</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> Pittsburgh, PA</span>
+        </div>
+      </div>
+      <ul class="exp-achievements">
+        <li>Built a supplier performance matrix from procurement data &mdash; <span class="exp-metric">5%</span> expense reduction and sharper RFQ insights</li>
+        <li>Designed and maintained dashboards tracking procurement metrics, surfacing bottlenecks for faster decisions</li>
+        <li>Developed an optimized workflow matrix for the procurement team &mdash; <span class="exp-metric">10%</span> shorter lead times</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Procurement</span><span>Dashboards</span><span>Supplier Mgmt</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp-card" data-side="left" style="--accent:#3B82F6;">
+    <div class="exp-marker"><i class="fas fa-plane"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2024</span>
+      <div class="exp-header">
+        <h3 class="exp-company">BAE Systems &middot; The Data Mine</h3>
+        <p class="exp-role">Technical Program Manager &middot; Supply Chain & Operations</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Aug &ndash; Dec 2024</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> West Lafayette, IN</span>
+        </div>
+      </div>
+      <ul class="exp-achievements">
+        <li>Led a 15-member cross-functional team to enhance aircraft spare parts supply chain via EDA + predictive modeling &mdash; <span class="exp-metric">20%</span> sales-forecast accuracy improvement, reducing stockout risk</li>
+        <li>Applied ML algorithms with a test-train approach to predict unit sales &mdash; <span class="exp-metric">15%</span> improvement in model accuracy and reliability</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Machine Learning</span><span>Supply Chain</span><span>Forecasting</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp-card" data-side="right" style="--accent:#A855F7;">
+    <div class="exp-marker"><i class="fas fa-robot"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2024</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Blue Wave AI Labs &middot; The Data Mine</h3>
+        <p class="exp-role">Product Manager &middot; LLM &amp; Nuclear Energy</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Jan &ndash; Apr 2024</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> West Lafayette, IN</span>
+        </div>
+      </div>
+      <ul class="exp-achievements">
+        <li>Managed an Agile team developing an LLM chatbot to automate nuclear energy proposals &mdash; <span class="exp-metric">20%</span> productivity gain</li>
+        <li>Employed risk registers and mitigation tactics to ensure timely delivery of milestones &mdash; <span class="exp-metric">20%</span> efficiency improvement</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Agile</span><span>LLMs</span><span>Risk Mgmt</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp-card" data-side="left" style="--accent:#10B981;">
+    <div class="exp-marker"><i class="fas fa-chalkboard-teacher"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2022 &mdash; 2023</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Thapathali Institute of Engineering</h3>
+        <p class="exp-role">Teaching Assistant &middot; Operations Research &amp; Management Science</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Jun 2022 &ndash; Dec 2023</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</span>
+        </div>
+      </div>
+      <ul class="exp-achievements">
+        <li>Facilitated lab sessions for <span class="exp-metric">40</span> students, introducing OR tools in Excel and real-world case studies &mdash; <span class="exp-metric">30%</span> lift in student engagement</li>
+        <li>Taught advanced techniques: Solver / linear programming, regression, decision analysis, forecasting models, risk analysis, and Monte Carlo simulation</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Teaching</span><span>Excel Solver</span><span>Monte Carlo</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp-card" data-side="right" style="--accent:#FBBF24;">
+    <div class="exp-marker"><i class="fas fa-charging-station"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2022 &mdash; 2023</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Energy System Research Lab</h3>
+        <p class="exp-role">Optimization Analyst &middot; National Electricity Authority</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Mar 2022 &ndash; Dec 2023</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</span>
+        </div>
+      </div>
+      <ul class="exp-achievements">
+        <li>Built an EV charging station placement model in Python with Google OR-Tools &mdash; <span class="exp-metric">3%</span> cost reduction</li>
+        <li>Developed a dynamic traffic model adjusting density in real time &mdash; <span class="exp-metric">15%</span> efficiency gain, lower wait times</li>
+        <li>Coordinated with urban planners & electrical engineers to integrate charging infrastructure &mdash; <span class="exp-metric">12%</span> efficiency improvement</li>
+      </ul>
+      <div class="exp-tags">
+        <span>Python</span><span>OR-Tools</span><span>Optimization</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="exp-card" data-side="left" style="--accent:#F59E0B;">
+    <div class="exp-marker"><i class="fas fa-solar-panel"></i></div>
+    <div class="exp-body">
+      <span class="exp-year-tag">2021</span>
+      <div class="exp-header">
+        <h3 class="exp-company">Saral Urja</h3>
+        <p class="exp-role">Product Design Engineer Intern &middot; Renewable Energy</p>
+        <div class="exp-meta">
+          <span class="exp-pill"><i class="fas fa-calendar-alt"></i> Mar &ndash; Jul 2021</span>
+          <span class="exp-pill"><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</span>
+        </div>
+      </div>
+      <ul class="exp-achievements">
+        <li>Designed optimized solar panel layouts in AutoCAD & PVSyst for commercial buildings &mdash; <span class="exp-metric">2.5%</span> annual energy cost savings</li>
+        <li>Engineered solar panel distribution networks and ran a feasibility study &mdash; <span class="exp-metric">40%</span> better electricity access in rural regions</li>
+      </ul>
+      <div class="exp-tags">
+        <span>AutoCAD</span><span>PVSyst</span><span>Feasibility</span>
+      </div>
+    </div>
+  </article>
+
 </div>
-</div>
-  <div class="box-container">
 
-    <div class="box tilt">
-      <img draggable="false" src=".\assets\images\experience\4.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Role Description</h3>
-        </div>
-        <div class="desc">
-          <p> I utilized data analytics and statistical modeling to design a solar power plant, reducing carbon emissions by 30% and improving energy efficiency. Through detailed data analysis, I generated comprehensive reports that provided actionable insights, leading to a 3% reduction in costs and enhanced operational efficiency. This approach allowed us to optimize both the environmental impact and the financial performance of the project, aligning with sustainability goals while ensuring cost-effective operations.</p>
-          <div class="btns">
-            <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="box tilt">
-      <img draggable="false" src=".\assets\images\experience\5.png" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Role Description</h3>
-        </div>
-        <div class="desc">
-          <p>I utilized Python and Google OR-Tools to create an optimized EV charging station placement model, achieving a 3% cost reduction. I applied data analytics to develop a dynamic traffic model that adjusted traffic density in real time, enhancing overall efficiency by 15% and reducing wait times. Additionally, I coordinated with urban planners and electrical engineers to seamlessly integrate charging infrastructure into urban environments, resulting in a 12% improvement in operational efficiency.</p>
-          <div class="btns">
-            <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="box-container">
-
-  <div class="box tilt">
-    <img draggable="false" src=".\assets\images\experience\6.png" alt="" />
-    <div class="content">
-      <div class="tag">
-      <h3>Role Description</h3>
-      </div>
-      <div class="desc">
-        <p> I facilitated a lab for 40 students on operational research and management science, where I introduced various OR tools in Excel. To enhance the learning experience, I developed customized case studies based on real-world scenarios, resulting in a 30% increase in student engagement and participation. Additionally, I provided instruction on advanced Excel techniques, including the Solver optimization tool through linear programming, data analysis (regression), decision analysis, forecasting models, risk analysis, and Monte Carlo simulation, equipping students with practical skills for solving business challenges.</p>
-        <div class="btns">
-          <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-          <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="box tilt">
-    <img draggable="false" src=".\assets\images\experience\7.png" alt="" />
-    <div class="content">
-      <div class="tag">
-      <h3>Role Description</h3>
-      </div>
-      <div class="desc">
-        <p> I designed optimized solar panel layouts for commercial buildings using AutoCAD and PVSyst, achieving a 2.5% reduction in annual energy consumption costs. I also developed solutions for solar panel distribution networks and conducted a comprehensive feasibility study, which enhanced access to electricity in rural regions by 40%. This work not only improved energy efficiency for commercial clients but also contributed significantly to expanding renewable energy access in underserved areas.</p>
-        <div class="btns">
-          <!--<a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-          <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>-->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  <!--<div class="timeline">
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The Data Mine - Purdue University	                                                                     West Lafayette, IN</h2>
-        </div>
-        <div class="desc">
-            <h3>Technical Program Manager| BAE Systems| Supply Chain & Operations </h3>
-            <p>Aug 2024 – Present</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Mapstreak Flyseas</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Mobile Application Developer | Internship</h3>
-            <p>April 2021 - May 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Frshr Technologies</h2>
-        </div>
-        <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>WonderingBlog</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="morebtn">
-    <a href="/experience" class="btn"><span>View All</span>
-      <i class="fas fa-arrow-right"></i>
-  </a>
-  </div>
-
+<div class="exp-cta">
+  <a href="/experience" class="exp-cta-btn"><span>View Full Journey</span><i class="fas fa-arrow-right"></i></a>
 </div>
 
 </section>

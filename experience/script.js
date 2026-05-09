@@ -26,8 +26,9 @@ const srtop = ScrollReveal({
 });
 
 /* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline',{delay: 400});
-srtop.reveal('.experience .timeline .container',{interval: 400}); 
+srtop.reveal('.experience .experience-intro', { delay: 200 });
+srtop.reveal('.experience .exp-card', { interval: 200, distance: '40px' });
+srtop.reveal('.experience .exp-cta', { delay: 300 });
 
 
 // Start of Tawk.to Live Chat
@@ -65,7 +66,7 @@ document.onkeydown = function(e) {
 document.addEventListener('visibilitychange',
 function(){
     if(document.visibilityState === "visible"){
-        document.title = "Experience | Portfolio Jigar Sable";
+        document.title = "Experience | Rodashi Panta";
         $("#favicon").attr("href","/assets/images/favicon.png");
     }
     else {

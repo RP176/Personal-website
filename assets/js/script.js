@@ -37,6 +37,59 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
+    // Project modal
+    const projModal = document.getElementById('projModal');
+    if (projModal) {
+        const modalContent = projModal.querySelector('.proj-modal-content');
+        const modalImg     = projModal.querySelector('.proj-modal-cover img');
+        const modalCat     = projModal.querySelector('.proj-modal-cover .proj-cat');
+        const modalTitle   = projModal.querySelector('.proj-title');
+        const modalOrg     = projModal.querySelector('.proj-org');
+        const modalDesc    = projModal.querySelector('.proj-modal-desc');
+        const modalStats   = projModal.querySelector('.proj-modal-body .proj-stats');
+        const modalTags    = projModal.querySelector('.proj-modal-body .proj-tags');
+
+        const openModal = (card) => {
+            const accent = card.style.getPropertyValue('--accent') || '#22D3EE';
+            modalContent.style.setProperty('--accent', accent);
+
+            const cardImg = card.querySelector('.proj-cover img');
+            modalImg.src = cardImg.src;
+            modalImg.alt = cardImg.alt;
+            modalCat.innerHTML = card.querySelector('.proj-cat').innerHTML;
+            modalTitle.innerHTML = card.querySelector('.proj-title').innerHTML;
+            modalOrg.innerHTML = card.querySelector('.proj-org').innerHTML;
+            modalDesc.innerHTML = card.querySelector('.proj-full').innerHTML;
+            modalStats.innerHTML = card.querySelector('.proj-stats').innerHTML;
+            modalTags.innerHTML = card.querySelector('.proj-tags').innerHTML;
+
+            projModal.removeAttribute('hidden');
+            projModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+            projModal.setAttribute('hidden', '');
+            projModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        };
+
+        document.querySelectorAll('.proj-readmore').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const card = btn.closest('.proj-card');
+                if (card) openModal(card);
+            });
+        });
+
+        projModal.querySelectorAll('[data-modal-close]').forEach(el => {
+            el.addEventListener('click', closeModal);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !projModal.hasAttribute('hidden')) closeModal();
+        });
+    }
+
     // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
         emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
@@ -240,11 +293,13 @@ srtop.reveal('.skills .container .bar', { delay: 400 });
 srtop.reveal('.education .box', { interval: 200 });
 
 /* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
+srtop.reveal('.work .proj-intro', { delay: 200 });
+srtop.reveal('.work .proj-card', { interval: 150, distance: '40px' });
 
 /* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
+srtop.reveal('.experience .experience-intro', { delay: 200 });
+srtop.reveal('.experience .exp-card', { interval: 200, distance: '40px' });
+srtop.reveal('.experience .exp-cta', { delay: 300 });
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
