@@ -1,6 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
+/* ===== Theme tokens ===== */
+:root {
+  /* Page */
+  --bg-page: #160433;
+  --header-bg: rgba(22, 4, 51, 0.85);
+  --header-border: rgba(255, 255, 255, 0.06);
+  --logo-color: #ffffff;
+  --nav-link: #d8d3ec;
+
+  /* Text */
+  --text-strong: #ffffff;
+  --text-body: #d8d3ec;
+  --text-muted: #b8b3d4;
+
+  /* Surfaces (glass cards, pills) */
+  --surface-bg: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  --surface-border: rgba(255,255,255,0.08);
+  --surface-hover-bg: rgba(255,255,255,0.08);
+  --pill-bg: rgba(255,255,255,0.04);
+  --pill-bg-strong: rgba(255,255,255,0.06);
+  --pill-border: rgba(255,255,255,0.10);
+  --grid-dot: rgba(255,255,255,0.04);
+  --hr-dashed: rgba(255,255,255,0.08);
+  --shadow-card: 0 1.4rem 3rem rgba(0,0,0,0.35);
+  --shadow-card-hover: 0 2.4rem 4.4rem rgba(0,0,0,0.5);
+
+  /* Section gradients */
+  --hero-bg:
+    radial-gradient(ellipse at 20% 30%, rgba(168, 85, 247, 0.18), transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(34, 211, 238, 0.10), transparent 55%),
+    linear-gradient(to bottom, #1a0738 0%, #2a0a5c 100%);
+  --about-bg:
+    radial-gradient(ellipse at 80% 0%, rgba(168, 85, 247, 0.14), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(34, 211, 238, 0.08), transparent 55%),
+    linear-gradient(to bottom, #2a0a5c 0%, #2a0a5c 100%);
+  --skills-bg:
+    radial-gradient(ellipse at 0% 0%, rgba(34,211,238,0.10), transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(251,191,36,0.10), transparent 50%),
+    linear-gradient(to bottom, #2a0a5c 0%, #410d8a 50%, #2a0a5c 100%);
+  --education-bg:
+    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.08), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(220,20,60,0.06), transparent 50%),
+    linear-gradient(to bottom, #160433 0%, #2a0a5c 50%, #1a0738 100%);
+  --work-bg:
+    radial-gradient(ellipse at 80% 0%, rgba(34,211,238,0.06), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.06), transparent 55%),
+    linear-gradient(to bottom, #050b22 0%, #0a1438 50%, #060a1f 100%);
+  --experience-bg:
+    radial-gradient(ellipse at 20% 0%, rgba(251,191,36,0.08), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(0,168,232,0.08), transparent 50%),
+    linear-gradient(to bottom, #1a0738 0%, #2a0a5c 50%, #160433 100%);
+
+  /* Footer (kept dark in both themes for contrast) */
+  --footer-bg: rgb(0, 1, 43);
+}
+
+[data-theme="light"] {
+  --bg-page: #f7f4fc;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-border: rgba(26, 7, 56, 0.08);
+  --logo-color: #1a0738;
+  --nav-link: #3a2c5c;
+
+  --text-strong: #1a0738;
+  --text-body: #3a2c5c;
+  --text-muted: #6e6688;
+
+  --surface-bg: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.75));
+  --surface-border: rgba(26,7,56,0.10);
+  --surface-hover-bg: rgba(26,7,56,0.04);
+  --pill-bg: rgba(26,7,56,0.04);
+  --pill-bg-strong: rgba(26,7,56,0.06);
+  --pill-border: rgba(26,7,56,0.10);
+  --grid-dot: rgba(26,7,56,0.06);
+  --hr-dashed: rgba(26,7,56,0.10);
+  --shadow-card: 0 1rem 2.4rem rgba(26,7,56,0.10);
+  --shadow-card-hover: 0 1.6rem 3.4rem rgba(26,7,56,0.18);
+
+  --hero-bg:
+    radial-gradient(ellipse at 20% 30%, rgba(168, 85, 247, 0.10), transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(34, 211, 238, 0.10), transparent 55%),
+    linear-gradient(to bottom, #faf6ff 0%, #efe6f9 100%);
+  --about-bg:
+    radial-gradient(ellipse at 80% 0%, rgba(168, 85, 247, 0.08), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(34, 211, 238, 0.06), transparent 55%),
+    linear-gradient(to bottom, #f5eefb 0%, #efe6f9 100%);
+  --skills-bg:
+    radial-gradient(ellipse at 0% 0%, rgba(34,211,238,0.08), transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(251,191,36,0.10), transparent 50%),
+    linear-gradient(to bottom, #f4ecfc 0%, #ebdef9 50%, #f4ecfc 100%);
+  --education-bg:
+    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.14), transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(220,20,60,0.05), transparent 50%),
+    linear-gradient(to bottom, #faf6ff 0%, #f0e7fb 50%, #f6efff 100%);
+  --work-bg:
+    radial-gradient(ellipse at 80% 0%, rgba(34,211,238,0.08), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.06), transparent 55%),
+    linear-gradient(to bottom, #f3f7fc 0%, #e8eef8 50%, #f3f7fc 100%);
+  --experience-bg:
+    radial-gradient(ellipse at 20% 0%, rgba(251,191,36,0.10), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(0,168,232,0.08), transparent 50%),
+    linear-gradient(to bottom, #faf5ff 0%, #efe6f9 50%, #f6efff 100%);
+
+  --footer-bg: #1a0738;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,8 +123,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #160433;
-  color: #e6e2f5;
+  background: var(--bg-page);
+  color: var(--text-body);
   font-family: "Poppins", sans-serif;
 }
 
@@ -71,11 +177,11 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background-color: rgba(22, 4, 51, 0.85);
+  background-color: var(--header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
 }
 section {
   min-height: 100vh;
@@ -83,7 +189,7 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: #ffffff;
+  color: var(--text-strong);
   font-weight: 800;
   text-align: center;
 }
@@ -94,7 +200,7 @@ header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--logo-color);
 }
 header .logo i {
   font-size: 2.2rem;
@@ -113,7 +219,7 @@ header .navbar li {
 }
 header .navbar ul li a {
   font-size: 1.57rem;
-  color: #d8d3ec;
+  color: var(--nav-link);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.04rem;
@@ -125,6 +231,34 @@ header .navbar ul li a:hover {
   border-bottom: 0.2rem solid #FBBF24;
   padding: 0.5rem 0;
 }
+
+/* Theme toggle button */
+.theme-toggle-li { margin-left: 1.5rem; }
+.theme-toggle {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  color: var(--text-body);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+  position: relative;
+}
+.theme-toggle:hover {
+  background: var(--surface-hover-bg);
+  color: #FBBF24;
+  border-color: #FBBF24;
+  transform: rotate(15deg);
+}
+.theme-toggle .theme-icon-sun { display: none; }
+.theme-toggle .theme-icon-moon { display: inline; }
+[data-theme="light"] .theme-toggle .theme-icon-sun { display: inline; }
+[data-theme="light"] .theme-toggle .theme-icon-moon { display: none; }
 /* navbar ends */
 
 /* hamburger icon starts*/
@@ -190,16 +324,13 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  background:
-    radial-gradient(ellipse at 20% 30%, rgba(168, 85, 247, 0.18), transparent 55%),
-    radial-gradient(ellipse at 80% 70%, rgba(34, 211, 238, 0.10), transparent 55%),
-    linear-gradient(to bottom, #1a0738 0%, #2a0a5c 100%);
+  background: var(--hero-bg);
 }
 .home::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
   background-size: 28px 28px;
   pointer-events: none;
   z-index: 0;
@@ -241,7 +372,7 @@ header .navbar ul li a:hover {
 .home .content h2 {
   font-size: 5rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-strong);
 }
 .home .content h2 span {
   font-size: 5rem;
@@ -250,7 +381,7 @@ header .navbar ul li a:hover {
 }
 .home .content p {
   font-size: 2.5rem;
-  color: #d8d3ec;
+  color: var(--text-body);
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -365,16 +496,13 @@ header .navbar ul li a:hover {
 .about {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 80% 0%, rgba(168, 85, 247, 0.14), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(34, 211, 238, 0.08), transparent 55%),
-    linear-gradient(to bottom, #2a0a5c 0%, #2a0a5c 100%);
+  background: var(--about-bg);
 }
 .about::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -408,7 +536,7 @@ header .navbar ul li a:hover {
   padding: 3rem;
 }
 .about .row .content h3 {
-  color: #ffffff;
+  color: var(--text-strong);
   font-size: 2.5rem;
 }
 .about .row .content .tag {
@@ -423,7 +551,7 @@ header .navbar ul li a:hover {
   font-family: "Nunito";
   font-weight: 500;
   text-transform: none;
-  color: #d8d3ec;
+  color: var(--text-body);
   line-height: 1.7;
 }
 .about .row .content .box-container {
@@ -494,10 +622,7 @@ header .navbar ul li a:hover {
 /* ===== Skills section (redesigned) ===== */
 .skills {
   min-height: auto;
-  background:
-    radial-gradient(ellipse at 0% 0%, rgba(34,211,238,0.10), transparent 50%),
-    radial-gradient(ellipse at 100% 100%, rgba(251,191,36,0.10), transparent 50%),
-    linear-gradient(to bottom, #2a0a5c 0%, #410d8a 50%, #2a0a5c 100%);
+  background: var(--skills-bg);
   position: relative;
   overflow: hidden;
   padding-bottom: 6rem;
@@ -506,12 +631,12 @@ header .navbar ul li a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
   background-size: 28px 28px;
   pointer-events: none;
 }
 .skills h2.heading {
-  color: #fff;
+  color: var(--text-strong);
   position: relative;
   z-index: 1;
 }
@@ -520,7 +645,7 @@ header .navbar ul li a:hover {
 
 .skills-intro {
   text-align: center;
-  color: #d8d3ec;
+  color: var(--text-body);
   font-size: 1.55rem;
   font-style: italic;
   font-family: 'Nunito', sans-serif;
@@ -545,13 +670,13 @@ header .navbar ul li a:hover {
 
 .skill-card {
   position: relative;
-  background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background: var(--surface-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--surface-border);
   border-radius: 1.6rem;
   padding: 2.4rem 2.4rem 2.6rem;
-  box-shadow: 0 1.4rem 3rem rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-card);
   transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s ease, box-shadow .4s ease;
   overflow: hidden;
 }
@@ -565,7 +690,7 @@ header .navbar ul li a:hover {
 .skill-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: 0 2.4rem 4.4rem rgba(0,0,0,0.5), 0 0 0 1px var(--accent);
+  box-shadow: var(--shadow-card-hover), 0 0 0 1px var(--accent);
 }
 
 .skill-card-head {
@@ -574,7 +699,7 @@ header .navbar ul li a:hover {
   gap: 1.4rem;
   padding-bottom: 1.6rem;
   margin-bottom: 1.8rem;
-  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  border-bottom: 1px dashed var(--hr-dashed);
 }
 .skill-card-icon {
   width: 5.4rem;
@@ -591,14 +716,14 @@ header .navbar ul li a:hover {
 }
 .skill-card-head h3 {
   font-size: 1.85rem;
-  color: #fff;
+  color: var(--text-strong);
   margin: 0;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
 .skill-card-head p {
   font-size: 1.15rem;
-  color: #b8b3d4;
+  color: var(--text-muted);
   margin: 0.3rem 0 0;
   font-family: 'Nunito', sans-serif;
   text-transform: none;
@@ -615,10 +740,10 @@ header .navbar ul li a:hover {
   align-items: center;
   gap: 0.7rem;
   padding: 0.7rem 1.1rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
   border-radius: 0.7rem;
-  color: #e6e2f5;
+  color: var(--text-body);
   font-size: 1.25rem;
   font-weight: 600;
   font-family: 'Nunito', sans-serif;
@@ -634,6 +759,13 @@ header .navbar ul li a:hover {
   filter: brightness(0) saturate(100%) invert(1);
   opacity: 0.92;
 }
+[data-theme="light"] .skill-chip img {
+  filter: brightness(0);
+  opacity: 0.55;
+}
+[data-theme="light"] .skill-chip:hover img {
+  opacity: 0.8;
+}
 .skill-chip i {
   color: var(--accent);
   font-size: 1.2rem;
@@ -641,9 +773,9 @@ header .navbar ul li a:hover {
   text-align: center;
 }
 .skill-chip:hover {
-  background: rgba(255,255,255,0.08);
+  background: var(--surface-hover-bg);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--text-strong);
   transform: translateY(-2px);
 }
 
@@ -659,10 +791,7 @@ header .navbar ul li a:hover {
 /* ===== Education section (redesigned) ===== */
 .education {
   min-height: auto;
-  background:
-    radial-gradient(ellipse at 100% 0%, rgba(207,185,145,0.08), transparent 50%),
-    radial-gradient(ellipse at 0% 100%, rgba(220,20,60,0.06), transparent 50%),
-    linear-gradient(to bottom, #160433 0%, #2a0a5c 50%, #1a0738 100%);
+  background: var(--education-bg);
   position: relative;
   overflow: hidden;
   padding-bottom: 6rem;
@@ -671,12 +800,12 @@ header .navbar ul li a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
   background-size: 28px 28px;
   pointer-events: none;
 }
 .education h2.heading {
-  color: #fff;
+  color: var(--text-strong);
   position: relative;
   z-index: 1;
 }
@@ -685,7 +814,7 @@ header .navbar ul li a:hover {
 
 .education-intro {
   text-align: center;
-  color: #d8d3ec;
+  color: var(--text-body);
   font-size: 1.55rem;
   font-style: italic;
   font-family: 'Nunito', sans-serif;
@@ -710,21 +839,21 @@ header .navbar ul li a:hover {
 
 .edu-card {
   position: relative;
-  background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background: var(--surface-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--surface-border);
   border-radius: 1.6rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1.4rem 3rem rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-card);
   transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s ease, box-shadow .4s ease;
 }
 .edu-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: 0 2.4rem 4.4rem rgba(0,0,0,0.5), 0 0 0 1px var(--accent);
+  box-shadow: var(--shadow-card-hover), 0 0 0 1px var(--accent);
 }
 
 .edu-head {
@@ -735,8 +864,8 @@ header .navbar ul li a:hover {
   padding: 2rem 2.2rem;
   background:
     linear-gradient(135deg, color-mix(in srgb, var(--accent) 25%, transparent), transparent 70%),
-    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+    linear-gradient(180deg, var(--pill-bg-strong), rgba(255,255,255,0));
+  border-bottom: 1px solid var(--surface-border);
   overflow: hidden;
 }
 .edu-head::before {
@@ -788,11 +917,11 @@ header .navbar ul li a:hover {
   border: 1px solid var(--accent);
   border-radius: 999px;
   font-family: 'Nunito', sans-serif;
-  background: rgba(0,0,0,0.2);
+  background: var(--pill-bg);
 }
 .edu-period {
   font-size: 1.2rem;
-  color: #d8d3ec;
+  color: var(--text-body);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   font-weight: 600;
@@ -809,7 +938,7 @@ header .navbar ul li a:hover {
 .edu-degree {
   font-size: 2.1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-strong);
   margin: 0;
   line-height: 1.2;
   letter-spacing: 0.2px;
@@ -826,7 +955,7 @@ header .navbar ul li a:hover {
 }
 .edu-loc {
   font-size: 1.2rem;
-  color: #b8b3d4;
+  color: var(--text-muted);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   margin: 0.1rem 0 0;
@@ -839,7 +968,7 @@ header .navbar ul li a:hover {
 .edu-focus {
   margin-top: 1.6rem;
   padding: 1.2rem 1.4rem;
-  background: rgba(255,255,255,0.03);
+  background: var(--pill-bg);
   border-left: 3px solid var(--accent);
   border-radius: 0.6rem;
 }
@@ -856,7 +985,7 @@ header .navbar ul li a:hover {
 }
 .edu-focus p {
   font-size: 1.35rem;
-  color: #e6e2f5;
+  color: var(--text-body);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   margin: 0;
@@ -874,10 +1003,7 @@ header .navbar ul li a:hover {
 
 /* ===== Projects section (redesigned) ===== */
 .work {
-  background:
-    radial-gradient(ellipse at 80% 0%, rgba(34,211,238,0.06), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(168,85,247,0.06), transparent 55%),
-    linear-gradient(to bottom, #050b22 0%, #0a1438 50%, #060a1f 100%);
+  background: var(--work-bg);
   position: relative;
   overflow: hidden;
   padding-bottom: 6rem;
@@ -886,12 +1012,12 @@ header .navbar ul li a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.035) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
   background-size: 32px 32px;
   pointer-events: none;
 }
 .work h2.heading {
-  color: #fff;
+  color: var(--text-strong);
   padding: 1rem;
   position: relative;
   z-index: 1;
@@ -901,7 +1027,7 @@ header .navbar ul li a:hover {
 
 .proj-intro {
   text-align: center;
-  color: #b8c1e0;
+  color: var(--text-body);
   font-size: 1.55rem;
   font-style: italic;
   font-family: 'Nunito', sans-serif;
@@ -926,16 +1052,16 @@ header .navbar ul li a:hover {
 
 .proj-card {
   position: relative;
-  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  background: var(--surface-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--surface-border);
   border-radius: 1.6rem;
   overflow: hidden;
   transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s ease, box-shadow .4s ease;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1.2rem 2.6rem rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-card);
 }
 .proj-card::before {
   content: '';
@@ -953,8 +1079,8 @@ header .navbar ul li a:hover {
 }
 .proj-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255,255,255,0.12);
-  box-shadow: 0 2.4rem 4.4rem rgba(0,0,0,0.55), 0 0 32px rgba(255,255,255,0.04);
+  border-color: var(--surface-border);
+  box-shadow: var(--shadow-card-hover);
 }
 .proj-card:hover::before { opacity: 1; }
 
@@ -980,7 +1106,7 @@ header .navbar ul li a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(6,10,31,0.85) 0%, rgba(6,10,31,0.2) 50%, transparent 100%);
+  background: linear-gradient(to top, color-mix(in srgb, var(--bg-page) 75%, transparent) 0%, color-mix(in srgb, var(--bg-page) 20%, transparent) 50%, transparent 100%);
   pointer-events: none;
 }
 .proj-cat {
@@ -992,7 +1118,7 @@ header .navbar ul li a:hover {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(8,12,32,0.85);
+  background: color-mix(in srgb, var(--bg-page) 80%, transparent);
   border: 1px solid var(--accent);
   color: var(--accent);
   border-radius: 999px;
@@ -1014,7 +1140,7 @@ header .navbar ul li a:hover {
 .proj-title {
   font-size: 1.85rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-strong);
   margin: 0 0 0.4rem;
   line-height: 1.25;
   letter-spacing: 0.2px;
@@ -1030,7 +1156,7 @@ header .navbar ul li a:hover {
 }
 .proj-desc {
   font-size: 1.3rem;
-  color: #cdd3eb;
+  color: var(--text-body);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   line-height: 1.6;
@@ -1044,8 +1170,8 @@ header .navbar ul li a:hover {
   gap: 1rem;
   margin-bottom: 1.4rem;
   padding: 1.2rem;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--pill-bg);
+  border: 1px solid var(--surface-border);
   border-radius: 0.9rem;
 }
 .proj-stat {
@@ -1065,7 +1191,7 @@ header .navbar ul li a:hover {
 }
 .proj-stat-label {
   font-size: 1.05rem;
-  color: #97a2c4;
+  color: var(--text-muted);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   font-weight: 500;
@@ -1077,15 +1203,15 @@ header .navbar ul li a:hover {
   gap: 0.5rem;
   margin-top: auto;
   padding-top: 1.2rem;
-  border-top: 1px dashed rgba(255,255,255,0.08);
+  border-top: 1px dashed var(--hr-dashed);
 }
 .proj-tags span {
   font-size: 1.05rem;
   padding: 0.35rem 0.9rem;
   border-radius: 0.5rem;
-  background: rgba(255,255,255,0.04);
+  background: var(--pill-bg);
   color: var(--accent);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid var(--pill-border);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   font-weight: 600;
@@ -1283,10 +1409,7 @@ header .navbar ul li a:hover {
 
 /* ===== Experience section (redesigned) ===== */
 .experience {
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(251,191,36,0.08), transparent 50%),
-    radial-gradient(ellipse at 80% 100%, rgba(0,168,232,0.08), transparent 50%),
-    linear-gradient(to bottom, #1a0738 0%, #2a0a5c 50%, #160433 100%);
+  background: var(--experience-bg);
   position: relative;
   overflow: hidden;
   padding-bottom: 6rem;
@@ -1295,13 +1418,12 @@ header .navbar ul li a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--grid-dot) 1px, transparent 0);
   background-size: 28px 28px;
   pointer-events: none;
 }
 .experience h2.heading {
-  color: #fff;
+  color: var(--text-strong);
   padding: 1rem;
   position: relative;
   z-index: 1;
@@ -1315,7 +1437,7 @@ header .navbar ul li a:hover {
 }
 .experience-intro {
   text-align: center;
-  color: #c9c2e8;
+  color: var(--text-body);
   font-size: 1.55rem;
   font-style: italic;
   font-family: 'Nunito', sans-serif;
@@ -1373,7 +1495,7 @@ header .navbar ul li a:hover {
   height: 5.4rem;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), var(--accent, #fbbf24) 60%);
-  border: 3px solid #160433;
+  border: 3px solid var(--bg-page);
   box-shadow:
     0 0 0 2px var(--accent, #fbbf24),
     0 0 24px var(--accent, #fbbf24),
@@ -1398,13 +1520,13 @@ header .navbar ul li a:hover {
 
 .exp-body {
   position: relative;
-  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background: var(--surface-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--surface-border);
   border-radius: 1.4rem;
   padding: 2.6rem 2.6rem 2.2rem;
-  box-shadow: 0 1.4rem 3rem rgba(0,0,0,0.35);
+  box-shadow: var(--shadow-card);
   transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s ease, box-shadow .4s ease;
   overflow: hidden;
 }
@@ -1424,19 +1546,16 @@ header .navbar ul li a:hover {
 }
 .exp-card[data-side="right"] .exp-body::after {
   left: -12px;
-  border-right-color: rgba(255,255,255,0.08);
+  border-right-color: var(--surface-border);
 }
 .exp-card[data-side="left"] .exp-body::after {
   right: -12px;
-  border-left-color: rgba(255,255,255,0.08);
+  border-left-color: var(--surface-border);
 }
 .exp-body:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow:
-    0 2.4rem 4.4rem rgba(0,0,0,0.5),
-    0 0 0 1px var(--accent),
-    0 0 40px rgba(255,255,255,0.04);
+  box-shadow: var(--shadow-card-hover), 0 0 0 1px var(--accent);
 }
 
 .exp-year-tag {
@@ -1459,7 +1578,7 @@ header .navbar ul li a:hover {
 .exp-company {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-strong);
   margin: 0;
   letter-spacing: 0.3px;
   line-height: 1.2;
@@ -1481,10 +1600,10 @@ header .navbar ul li a:hover {
 .exp-pill {
   font-size: 1.15rem;
   padding: 0.45rem 1rem;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--pill-bg-strong);
+  border: 1px solid var(--pill-border);
   border-radius: 999px;
-  color: #d8d3ec;
+  color: var(--text-body);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   font-weight: 500;
@@ -1507,7 +1626,7 @@ header .navbar ul li a:hover {
   padding: 0.4rem 0 0.4rem 2.4rem;
   font-size: 1.32rem;
   line-height: 1.65;
-  color: #e6e2f5;
+  color: var(--text-body);
   margin-bottom: 0.6rem;
   text-transform: none;
   font-family: 'Nunito', sans-serif;
@@ -1539,15 +1658,15 @@ header .navbar ul li a:hover {
   gap: 0.5rem;
   margin-top: 1.4rem;
   padding-top: 1.4rem;
-  border-top: 1px dashed rgba(255,255,255,0.08);
+  border-top: 1px dashed var(--hr-dashed);
 }
 .exp-tags span {
   font-size: 1.05rem;
   padding: 0.35rem 0.9rem;
   border-radius: 0.5rem;
-  background: rgba(255,255,255,0.04);
+  background: var(--pill-bg);
   color: var(--accent);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid var(--pill-border);
   font-family: 'Nunito', sans-serif;
   text-transform: none;
   font-weight: 600;

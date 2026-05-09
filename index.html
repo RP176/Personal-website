@@ -13,6 +13,14 @@
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Rodashi Panta</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        } catch (e) {}
+      })();
+    </script>
 </head>
 <body oncontextmenu="return false">
 
@@ -35,6 +43,12 @@
             <li><a href="#work">Project</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="theme-toggle-li">
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme" type="button">
+                <i class="fas fa-moon theme-icon-moon"></i>
+                <i class="fas fa-sun theme-icon-sun"></i>
+              </button>
+            </li>
             </ul>
         </nav>
 </header>

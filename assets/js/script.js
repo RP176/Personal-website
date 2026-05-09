@@ -37,6 +37,22 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
+    // Theme toggle
+    var themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            var root = document.documentElement;
+            var isLight = root.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                root.removeAttribute('data-theme');
+                try { localStorage.setItem('theme', 'dark'); } catch (e) {}
+            } else {
+                root.setAttribute('data-theme', 'light');
+                try { localStorage.setItem('theme', 'light'); } catch (e) {}
+            }
+        });
+    }
+
     // Project modal
     const projModal = document.getElementById('projModal');
     if (projModal) {
