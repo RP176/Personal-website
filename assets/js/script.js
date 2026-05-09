@@ -286,8 +286,8 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 
 /* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.skills .skills-intro', { delay: 200 });
+srtop.reveal('.skills .skill-card', { interval: 200, distance: '40px' });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
